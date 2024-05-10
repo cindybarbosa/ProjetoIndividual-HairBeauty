@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleLogin.css">
+</head>
+
+<body>
+    <div class="telaCompleta">
+        <div class="tela">
+            <h2 class="titulo">LOGIN</h2>
+
+            <input class="input1" type="text" id="input_email" placeholder="Email">
+            <br>
+            <input class="input2" type="password" id="input_senha" placeholder="Senha">
+            <br>
+            <div id="mensagem"></div>
+                <span class="span">Ainda não é usuário Hair Beauty?<span><a href="../hair-beauty/cadastro.html" id="conta"> Crie uma
+                            conta.</a></span></span>
+            <button  class="botao" onclick="entrar()">Entrar</button>
+            <div id="mensagem"></div>
+            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var limite = 3
+
+function entrar(){
+
+    var email = input_email.value;
+    var senha = input_senha.value;
+
+    for(var cont = 0; cont < limite; cont ++){
+        if(email === '' && senha === ''){
+            mensagem.innerHTML += `Carregando...`;
+            tentativas = 3; 
+            setTimeout(function (){
+                window.location.href = "../dicas/dicas.html";
+            }, 2000);
+        }
+    }
+
+}
+</script>
