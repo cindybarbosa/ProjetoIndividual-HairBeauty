@@ -7,6 +7,8 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     color: rgb(8, 8, 8);
+    box-sizing: border-box;
+    
 }
 
 
@@ -76,6 +78,7 @@ li {
     border-radius: 40px;
     justify-content: end;
     width: 100%;
+   
 }
 
 .proposta .box1 {
@@ -91,6 +94,7 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 80px;
+   
 
 }
 
@@ -138,19 +142,24 @@ li {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    height: 100%;
 }
 
 .col2 {
     width: 50%;
     padding: 10px 15px;
     display: flex;
-
-
 }
+
 
 .col2 .section1img {
     width: 50%;
     padding: 0 15px;
+}
+
+.box2 img{
+    width: 200px;
+    height: 250px;
 }
 
 .titleproposta {
@@ -165,26 +174,75 @@ li {
 }
 
 
-.footer{
+.footer {
     background-color: #FFDCE0;
     color: #000000;
 }
 
-.footer .container{
+.footer .container {
     justify-content: center;
     align-items: center;
 }
 
+.container3{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-image: url(../hair-beauty/assets/fundo\ bolhas\ 2024-05-13\ 132225.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    padding-bottom: 80px;
+
+    
+}
+
+.box1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box1 img {
+    width: 200px;
+    height: 270px;
+    display: flex;
+    margin-right: auto;
+    border-radius: 17px;
+}
+
+.box1 p{
+    width: 142px;
+    height: 30px;
+    font-size: 18px;
+
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    background-color: #FFDCE0;
+    font-size: 2rem;
+}
+
+.title h3 {
+    padding: 5px 0;
+}
 
 
-/* Configuração para telas pequenas (>=576px) */
+
+/* Configuração para telas pequenas (>=576px)
 @media (min-width: 576px) {
     .ctn {
         max-width: 540px;
     }
 }
 
-/* / Configuração para telas médias (>=768px) / */
+/ Configuração para telas médias (>=768px) /
 @media (min-width: 768px) {
     .ctn {
         max-width: 720px;
@@ -192,15 +250,15 @@ li {
 }
 
 /* / Configuração para telas grandes (>=992px) / */
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .ctn {
         max-width: 960px;
     }
-}
+} */
 
 /* / Configuração para telas extra grandes (>=1200px) */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
     .ctn {
         max-width: 1140px;
-    }
-}
+    } */
+/* } */
