@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hair Beauty</title>
-    <link rel="stylesheet" href="styleinicial">
+    <link rel="stylesheet" href="inicial.css">
+
 </head>
 
 <body>
@@ -15,33 +16,99 @@
 
             <div class="navbar">
                 <ul>
-                    <a href="sobremim.html" onclick="sobremim()"> <li> Sobre Mim</li>
+                    <a href="#sobremim" onclick="scrollToSection('sobremimNav')">
+                        <li>Sobre Mim</li>
                     </a>
-                    <a href="proposta.html" onclick="proposta()"> <li>Proposta</li>
+                    <a href="#proposta" onclick="scrollToSection('proposta')">
+                        <li class="propostaNav">Proposta</li>
                     </a>
-                    <a href="dicas.html" onclick="dicas()">
-                        <li>Dicas</li>
+                    <a href="#tela_inicial" onclick="scrollToSection('inicial')">
+                        <li class="Inicio">Inicio</li>
                     </a>
-                    <a href="tela_inicial.html" onclick="inicial()">
-                        <li> Inicial </li>
-                    </a>
-                    <a href="quiz.html" onclick="quiz()">
-                        <li> Quiz </li>
-                    </a>
-                    <a href="cadastro.html">
-                        
+                    <a href="login.html" onclick="login()">
+                        <li class="login">Login</li>
                     </a>
 
-
-                    
-                    <h1 class="titulocentral">HAIR BEAUTY</h1>
-                    
                 </ul>
-                </div>
-                
+            </div>
         </div>
+    </div>
 
 
+    <div id="banner" class="banner">
+        <div class="container">
+
+            <span class="titulo">HAIR BEAUTY</span>
+
+        </div>
+    </div>
+
+
+    <div class="ctn">
+        <section class="proposta" id="proposta">
+            <div class="titleproposta">
+                <h4>Proposta</h4>
+            </div>
+            <div class="container2">
+                <div class="texto">
+                    <p>Cuidar da nossa imagem é mais do que uma
+                        questão de aparência, é um reflexo do nosso
+                        amor-próprio e
+                        dedicação ao crescimento pessoal.
+                        E com isso, teremos o poder de elevar a auto-estima, e a saúde capilar. O objetivo desse site é
+                        você encontrar dicas de como poderá cuidar, e obter a melhor versão do seu cabelo!
+
+                    </p>
+                </div>
+                <div class="col2">
+                    <div class="box1 section1img">
+
+                        <img
+                            src="../hair-beauty/assets/mulher-de-altura-media-a-dar-se-uma-massagem-no-couro-cabeludo.png">
+
+                    </div>
+                    <div class="box2 section1img">
+                        <img src="../hair-beauty/assets/kerastase2.jpg">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </section>
+
+
+    <section class="sobremim" id="sobremim">
+        <div class="container3">
+            <div class="box1">
+
+                <img src="../hair-beauty/assets/fotocabelo.jpeg">
+                <div class="texto1">
+                    <p>O meu cabelo virou minha identidade, e então desde que completei meus 16 anos me
+                        interessei mais por cuidados capilares.</p>
+                </div>
+                <div class="box2">
+                    <img src="../hair-beauty/assets/fotominha.jpeg">
+                    <div class="texto1">
+                        <p>Prazer, meu nome é Cindy! Tenho 18 anos e sou apaixonada pelo mundo da beleza.
+                        </p>
+                    </div>
+                </div>
+                <div class="box2">
+                    <img src="../hair-beauty/assets/cabelo3.jpeg">
+                    <div class="texto1">
+                        <p>Muitas pessoas me perguntavam quais os cuidados que eu tinha com meu cabelo, e nisto vi a
+                            oportunidade de ajudá-las!</p>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>Feito com amor &hearts; para todos os tipos de cabelo!</p>
+        </div>
     </div>
 
 </body>

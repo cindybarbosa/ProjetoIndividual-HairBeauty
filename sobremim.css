@@ -1,0 +1,25 @@
+body {
+    overflow-x: hidden;
+    display: contents;
+
+}
+
+
+.telatoda{
+
+    
+    width: 99vw;
+    height: 97vh;
+    background-image: url(assets/cetimrosa.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.sobremim{
+width: 99vw;
+height: 6vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+}
