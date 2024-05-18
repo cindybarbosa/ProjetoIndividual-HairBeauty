@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <H1 class="titulo">HAIR BEAUTY</H1>
+            <ul class="navbar">
+                <li id="#inicio"> Início </li>
+                <li> Sobre mim </li>
+                <li> | </li>
+
+                <a href="login.html">
+                    <li> Login </li>
+                </a>
+
+                <a href="./cadastro.html">
+                    <li> Cadastro </li>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container">
+            <div class="label">
+                <label>
+                    <div class="cadastro">
+                        <h3>Cadastro</h3>
+                    </div>
+
+                    Nome: <input type="text" id="input_nome" placeholder="Nome" class="inputs">
+                    Email: <input type="text" id="input_email" placeholder="Email" class="inputs">
+                    Senha: <input type="password" id="input_senha" placeholder="Senha" class="inputs">
+                    Confirmação de Senha: <input type="password" id="input_confirmacao"
+                        placeholder="Confirmação de Senha" class="inputs">
+
+                    <button class="botao" onclick="cadastrar()">Cadastrar</button>
+
+                    <div id="msg"></div>
+
+                    <a href="dicas.html"></a>
+
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function cadastrar() {
+
+        var nome = input_nome.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+        var confirmacao = input_confirmacao.value;
+        var indice_arroba = email.indexOf('@');
+        var indice_ponto = email.indexOf('.');
+
+        if (nome == '' || email == '' || senha == '' || confirmacao == '') {
+            alert('Preencha todos os campos')
+        } else if (indice_arroba == -1 || indice_ponto == -1) {
+            alert('Adicione @ e . para prosseguir')
+        } else if (senha <= 4) {
+            alert('A senha deve conter a partir de 4 caracteres')
+        } else if (senha != confirmacao) {
+            alert('As senhas devem ser iguais')
+        } else {
+            msg.innerHTML = 'Cadastro Concluído ❣'
+            setTimeout(function () {
+                window.location.href = "../hair-beauty/login.html"
+            }, 1000);
+            return;
+        }
+    }
+</script>
