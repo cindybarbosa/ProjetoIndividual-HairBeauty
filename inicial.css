@@ -8,7 +8,9 @@ body {
     overflow-y: scroll;
     color: rgb(8, 8, 8);
     box-sizing: border-box;
-
+    background-image: url(../hair-beauty/API/public/assets/menina1.jpg);
+    display: block;
+    
 }
 
 * {
@@ -33,6 +35,16 @@ body {
     margin: auto;
     font-family: monospace;
     text-shadow: 0.1em 0.1em 0.2em rgb(255, 255, 255)
+}
+
+.containerzinho{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    font-family: monospace;
+   
 }
 
 
@@ -91,12 +103,13 @@ ul {
 .banner {
     height: 620px;
     background-size: cover;
-    background-image: url(../hair-beauty/API/public/assets/individual\ \(3\)\ 2\ \(1\).png);
+    background-image: url(../hair-beauty/API/public/assets/dumpp2.png);
     background-size: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 
@@ -142,22 +155,9 @@ ul {
     padding: 0;
 }
 
-.proposta img {
-    border-radius: 40px;
-    justify-content: end;
-    width: 100%;
-
-}
-
-.proposta .box1 {
-
-    margin-top: 40px;
-    margin-right: 15px;
-
-}
 
 .proposta {
-    background-image: url(../hair-beauty/API/public/assets/Captura\ de\ tela\ 2024-05-17\ 144951.png);
+    background-image: url(../hair-beauty/API/public/assets/pretoebranco1.jpg);
     background-position: right top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -180,10 +180,20 @@ ul {
 
 .container2 {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 80vh;
     font-size: 20px;
+    margin-top: 100px;
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+}
+
+.container2 p{
+    display: flex;
+    padding: 10px 15px;
+    justify-items: flex-start;
+
 }
 
 .texto {
@@ -211,15 +221,6 @@ ul {
     align-items: center;
 }
 
-/* Definição inicial da classe container */
-.ctn {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 100%;
-}
 
 .col2 {
     width: 50%;
@@ -253,11 +254,13 @@ ul {
 .footer {
     background-color: #FFDCE0;
     color: #000000;
+    height: 5vh;
 }
 
 .footer .container {
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .container3 {
@@ -268,9 +271,9 @@ ul {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    background-image: url(../hair-beauty/API/public/assets/fundo\ bolhas\ 2024-05-13\ 132225.png);
+    background-image: url(../hair-beauty/API/public/assets/produtos1.jpg);
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: 50%;
     background-size: cover;
     padding-bottom: 80px;
 
@@ -294,7 +297,9 @@ ul {
 .box1 p {
     width: 142px;
     height: 30px;
-    font-size: 18px;
+    font-size: 20px;
+    color: white;
+    text-shadow: #000000;
 
 }
 

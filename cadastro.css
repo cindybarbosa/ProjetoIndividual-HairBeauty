@@ -8,31 +8,39 @@ body {
     overflow-y: scroll;
     color: rgb(8, 8, 8);
     box-sizing: border-box;
-    background-image: url(../hair-beauty/API/public/assets/cabelo2.jpg);
+    background-image: url(../hair-beauty/API/public/assets/kerastasesrosa.jpg);
     background-position: 100%;
     background-size: 100%;
-    gap: 1rem;  
+    gap: 1rem;
     background-repeat: no-repeat;
 
 }
 
-.titulo{
+.titulo {
     color: white;
     text-shadow: #f12361;
 }
 
-.navbar{
+.navbar a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+}
+
+.navbar {
     height: 50px;
     align-items: center;
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: right;
     width: 50%;
     color: white;
+    font-size: 25px;
+    margin: 10px;
 }
 
 .header {
-    border-bottom: 3px solid #f12361;
+    border-bottom: 3px solid #ffffff;
 }
 
 .container {
@@ -43,16 +51,9 @@ body {
 
 .header .container {
     justify-content: space-between;
+    color: white;
 }
 
-
-/* .banner {
-   
-    height: 100%;
-    width: 100%;
-    margin-top: 100px;
-    color: white;
-} */
 
 
 .banner .container {
@@ -60,10 +61,6 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    /* background-image: url(../hair-beauty/API/public/assets/cabelo2.jpg);
-    background-position: 100%;
-    background-size: 100%;
-    gap: 1rem;    */
 }
 
 
@@ -76,6 +73,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    margin: 50px;
 }
 
 
@@ -94,7 +92,7 @@ body {
 }
 
 
-.container h3{
+.container h3 {
     display: flex;
     text-align: center;
 }
@@ -111,4 +109,3 @@ body {
     margin-left: 55px;
     gap: 10px;
 }
-
