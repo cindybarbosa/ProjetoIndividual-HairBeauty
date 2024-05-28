@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Beauty</title>
+    <link rel="stylesheet" href="inicial.css">
+
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container">
+
+            <div class="navbar">
+                <ul>
+                    <div class="S">
+                        <a href="#sobremim" onclick="scrollToSection('sobremimNav')">
+                            <li class="sobreMim1">Sobre Mim</li>
+                        </a>
+                    </div>
+                    <div class="P">
+                        <a href="#proposta" onclick="scrollToSection('proposta')">
+                            <li class="prop">Proposta</li>
+                        </a>
+                    </div>
+                    <a href="#Home" onclick="scrollToSection('Home')">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="login.html" onclick="login()">
+                        <li>Login</li>
+                    </a>
+                    <a href="cadastro.html" onclick="cadastro()">
+                        <li>Cadastro</li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+<section id="Home">
+    <div id="banner" class="banner">
+        <div class="container">
+            <span class="titulo">HAIR BEAUTY</span>
+            
+        </div>
+    </div>
+</section>
+
+        <section class="proposta" id="proposta">
+            <div class="titleproposta">
+                <h4>Proposta</h4>
+            </div>
+            <div class="container2">
+                <div class="texto-container-um">
+                    <p>Cuidar da nossa imagem é mais do que uma
+                        questão de aparência, é um reflexo do nosso
+                        amor-próprio e
+                        dedicação ao crescimento pessoal.
+                        E com isso, teremos o poder de elevar a auto-estima, e a saúde capilar. O objetivo desse site é
+                        você encontrar dicas de como poderá cuidar, e obter a melhor versão do seu cabelo!
+
+                    </p>
+                        <img src="assets/lavando.jpg" width="250px" height="250px;" style="border-radius: 30px;" >
+                    </div>
+                <div class="texto-container-dois">
+                    <p>
+                        Portanto, estamos contribuindo para um mundo onde a saúde e o bem-estar são prioridades.
+                        Estamos alinhados com os Objetivos de Desenvolvimento Sustentável da ONU, especialmente o
+                        objetivo de promover o bem-estar para todos.
+                    </p>
+
+                    <img src="assets/simbolosaude.png" width="400px" height="300px">
+                </div>
+                <!-- <div class="col2"> -->
+                    <!-- <div class="box1 section1img"> -->
+
+                        <!-- <img
+                            src="../hair-beauty/API/public/assets/mulher-de-altura-media-a-dar-se-uma-massagem-no-couro-cabeludo.png"> -->
+
+                    <!-- </div> -->
+                    <!-- <div class="box2 section1img"> -->
+                        <!-- <img src="../hair-beauty/API/public/assets/kerastase2.jpg"> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            </div>
+
+    </section>
+
+
+    <div class="ctn2">
+        <section class="sobremim" id="sobremim">
+            <div class="title">
+                <h3>Sobre Mim</h3>
+            </div>
+            <div class="container3">
+                <div class="box1">
+                    <img src="assets/fotocabelo.jpeg">
+
+                    <p>O meu cabelo virou minha identidade, e então desde que completei meus 16 anos me
+                        interessei mais por cuidados capilares.</p>
+
+                </div>
+                <div class="box1">
+                    <img src="assets/fotominha.jpeg">
+
+                    <p>Prazer, meu nome é Cindy! Tenho 18 anos e sou apaixonada pelo mundo da beleza.
+                    </p>
+
+                </div>
+                <div class="box1">
+                    <img src="assets/cabelomeu.jpg">
+
+                    <p>Muitas pessoas me perguntavam quais os cuidados que eu tinha com meu cabelo, e nisto vi a
+                        oportunidade de ajudá-las!</p>
+
+                </div>
+
+            </div>
+    </div>
+
+    </section>
+    <div class="footer">
+        <div class="containerzinho">
+            <p>Feito com amor &hearts; para todos os tipos de cabelo!</p>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    function scrollToSection(sectionId){
+
+        var section = document.getElementById(sectionId);
+
+        section.scrollIntoView({behavior: 'smoth', block: 'start'});
+
+    };
+</script>

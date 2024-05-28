@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: judson;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: rgb(8, 8, 8);
+    box-sizing: border-box;
+    background-image: url(assets/kerastasesrosa.jpg);
+    background-position: 100%;
+    background-size: 100%;
+    gap: 1rem;
+    background-repeat: no-repeat;
+
+}
+
+.titulo {
+    color: white;
+    text-shadow: #f12361;
+}
+
+.navbar a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+}
+
+.navbar li:hover {
+    color: #f12361;
+    transition: 0.3s;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    width: 50%;
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+    list-style: none;
+}
+
+.header {
+    border-bottom: 3px solid #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.header .container {
+    justify-content: space-between;
+    color: white;
+}
+
+.banner .container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    color: #f12361;
+    background-color: white;
+    height: 420px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 50px;
+}
+
+.inputs {
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+    border-color: rgba(178, 176, 245, 0.925);
+    background-color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    display: flex;
+    margin: 10px;
+}
+
+
+.container h3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.botao {
+    border-radius: 5px;
+    background-color: rgba(238, 11, 106, 0.925);
+    height: 30px;
+    width: 110px;
+    color: white;
+    border-color: rgba(243, 46, 128, 0.925);
+    justify-content: center;
+    margin-left: 61px;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
