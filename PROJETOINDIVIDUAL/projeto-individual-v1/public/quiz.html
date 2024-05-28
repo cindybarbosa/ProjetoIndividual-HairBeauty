@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz sobre Friends</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+<div class="cabecalho">
+<header class="headersite">
+<a href=""> <img width="300px" src="" alt=""></a>
+</header>
+</div>
+<div class="containerInteiro">
+<div class="container">
+<h2>QUIZ SOBRE AS DICAS</h2>
+<p>Teste seus conhecimentos sobre os cuidados capilares!</p><br><br>
+<div id="questao"></div>
+<button id="opcao1" class="botaoresposta" onclick="verificarResposta(1)"></button>
+<button id="opcao2" class="botaoresposta" onclick="verificarResposta(2)"></button>
+<button id="opcao3" class="botaoresposta" onclick="verificarResposta(3)"></button>
+<div class="botoes">
+<button id="voltar" onclick="voltarParaDashboard()">Voltar</button>
+<button id="reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+</div>
+<div class="metricas">
+<div class="acertos" id="acertos"></div>
+<div class="erros" id="erros"></div>
+</div>
+<div class="reiniciarquizz">
+<button id="reiniciar" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+const perguntas = [
+{ pergunta: "Qual é o principal benefício de usar máscara de hidratação toda semana?", opcoes: ["Restaurar a umidade perdida, deixando os cabelos mais macios, suaves e flexíveis.", " Fortalecer os fios, reduzindo a quebra e as pontas duplas, promovendo cabelos mais saudáveis e resistentes."], resposta: 1 },
+{ pergunta: "Qual é a temperatura ideal da água para lavar o cabelo?", opcoes: ["Água gelada", "Água quente", "Água morna"], resposta: 3 },
+{ pergunta: "Por que é importante usar produtos adequados ao seu tipo de cabelo?", opcoes: ["Para seguir as tendências da moda", "Para evitar danos e promover a saúde do cabelo", "Porque todos os produtos são iguais"], resposta: 2 },
+{ pergunta: "Por que é importante pentear o cabelo antes de dormir?", opcoes: ["Pra deixar macio", "Para reduzir a quebra e os nós", "Pra não precisar pentear pela manhã"], resposta: 2 },
+{ pergunta: "Por que é importante evitar lavar o cabelo com água quente?", opcoes: ["Para evitar o ressecamento do couro cabeludo", "Para garantir que o cabelo fique mais brilhante", "Porque a água quente remove o excesso de óleo dos cabelos"], resposta: 1 },
+{ pergunta: "Qual é a melhor maneira de desembaraçar o cabelo molhado?", opcoes: ["Pentear com força para remover todos os nós de uma vez", "Usar um pente com dentes apertados", "Começar a pentear das pontas e subir até a raiz"], resposta: 3 },
+];
+var perguntas_embaralhadas = [];
+var perguntaAtual = 0;
+var acertos = 0;
+var erros = 0;
+var fkUsuarioVar = sessionStorage.ID_USUARIO;
+
+function embaralharPerguntas() {
+perguntas_embaralhadas = perguntas.slice();
+for (var index = perguntas_embaralhadas.length - 1; index > 0; index--) {
+const j = Math.floor(Math.random() * (index + 1));
+[perguntas_embaralhadas[index], perguntas_embaralhadas[j]] = [perguntas_embaralhadas[j], perguntas_embaralhadas[index]];
+}
+}
+
