@@ -4,12 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz sobre Friends</title>
-<link rel="stylesheet" href="quiz.css">
+<title>Quiz sobre Cabelos</title>
+
 </head>
 
 <body>
-<div class="cabecalho">
+<div class="navbar">
 <header class="headersite">
 <a href=""> <img width="300px" src="" alt=""></a>
 </header>
@@ -60,4 +60,89 @@ const j = Math.floor(Math.random() * (index + 1));
 [perguntas_embaralhadas[index], perguntas_embaralhadas[j]] = [perguntas_embaralhadas[j], perguntas_embaralhadas[index]];
 }
 }
+function exibirPergunta() {
+document.getElementById('questao').innerHTML = perguntas_embaralhadas[perguntaAtual].pergunta;
+for (var index = 0; index < 4; index++) {
+document.getElementById('opcao' + (index + 1)).innerHTML = perguntas_embaralhadas[perguntaAtual].opcoes[index];
+document.getElementById('opcao' + (index + 1)).disabled = false; // Habilita os botões
+}
+}
 
+function verificarResposta(respostaUsuario) {
+var resultado = document.createElement('div');
+if (respostaUsuario === perguntas_embaralhadas[perguntaAtual].resposta) {
+acertos++;
+resultado.textContent = "Você acertou!";
+resultado.style.color = "green";
+} else {
+erros++;
+resultado.textContent = "Você errou!";
+resultado.style.color = "red";
+}
+sessionStorage.setItem('acertos', acertos);
+sessionStorage.setItem('erros', erros);
+document.getElementById('questao').appendChild(resultado);
+for (var index = 0; index < 4; index ++) {
+document.getElementById('opcao' + (index + 1)).disabled = true; // Desabilita os botões após a resposta
+}
+
+perguntaAtual++;
+if (perguntaAtual < perguntas_embaralhadas.length) {
+setTimeout(() => {
+document.getElementById('questao').removeChild(resultado);
+exibirPergunta();
+}, 1200); // Espera 1.2 segundos antes de mostrar a próxima pergunta
+} else {
+document.getElementById('questao').innerHTML = "Quiz concluído!";
+document.getElementById('acertos').style.display = "block";
+document.getElementById('erros').style.display = "block";
+document.getElementById('acertos').innerHTML = "Acertos: " + acertos;
+document.getElementById('erros').innerHTML = "Erros: " + erros;
+document.getElementById('reiniciar').style.display = "block";
+document.getElementById('voltar').style.display = "block"; // Mostra o botão "Voltar"
+
+// fazer fetch no end point de inserção dos dados
+fetch("http://localhost:3333/banco/guardar", {
+method: "POST",
+headers: {
+"Content-Type": "application/json",
+},
+body: JSON.stringify({
+// crie um atributo que recebe o valor recuperado aqui
+// Agora vá para o arquivo routes/usuario.js
+fkUsuarioServer: fkUsuarioVar,
+qtdAcertosServer: acertos,
+qtdErrosServer: erros
+}),
+}).then((res) => console.log(res.json())).then((res) => {})
+
+// Oculta os botões de opção
+for (var index = 0; index < 4; index++) {
+document.getElementById('opcao' + (index + 1)).style.display = "none";
+}
+}
+}
+
+function reiniciarQuiz() {
+perguntaAtual = 0;
+acertos = 0;
+erros = 0;
+embaralharPerguntas();
+document.getElementById('reiniciar').style.display = "none";
+document.getElementById('voltar').style.display = "none"; // Esconde o botão "Voltar"
+document.getElementById('acertos').style.display = "none";
+document.getElementById('erros').style.display = "none";
+exibirPergunta();
+// Mostrar botões de opção
+for (var index = 0; index < 4; index++) {
+document.getElementById('opcao' + (index + 1)).style.display = "block";
+}
+}
+
+function voltarParaDashboard() {
+window.location.href = "dashboard.html"; // Redireciona para a dashboard
+}
+
+embaralharPerguntas();
+exibirPergunta();
+</script>
