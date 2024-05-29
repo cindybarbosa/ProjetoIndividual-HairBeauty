@@ -54,7 +54,7 @@ var erros = 0;
 var fkUsuarioVar = sessionStorage.ID_USUARIO;
 
 function embaralharPerguntas() {
-perguntas_embaralhadas = perguntas.slice();
+perguntas_embaralhadas = perguntas.slice(); 
 for (var index = perguntas_embaralhadas.length - 1; index > 0; index--) {
 const j = Math.floor(Math.random() * (index + 1));
 [perguntas_embaralhadas[index], perguntas_embaralhadas[j]] = [perguntas_embaralhadas[j], perguntas_embaralhadas[index]];
