@@ -23,7 +23,7 @@ body {
 
 .header {
     display: flex;
-    background-color: #FFDCE0;
+    background-color: #ff92adbb;
     position: fixed;
     width: 100%;
 
@@ -63,7 +63,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #f12361;
+    color: #ffffff;
     transition: 0.3s;
 }
 
@@ -180,7 +180,7 @@ ul {
 .titleproposta {
     width: 100%;
     text-align: center;
-    background-color: #FFDCE0;
+    background-color: #ff92adbb;
     font-size: 2rem;
 }
 
@@ -190,7 +190,7 @@ ul {
 
 
 .footer {
-    background-color: #FFDCE0;
+    background-color: #ff92adbb;
     color: #000000;
     height: 5vh;
     width: 100%;
@@ -259,7 +259,7 @@ ul {
 .title {
     width: 100%;
     text-align: center;
-    background-color: #FFDCE0;
+    background-color: #ff92adbb;
     font-size: 2rem;
 }
 

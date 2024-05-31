@@ -8,15 +8,43 @@ body {
     overflow-y: scroll;
     color: rgb(8, 8, 8);
     box-sizing: border-box;
+    background-image: url(assets/mulherPB.jpg);
 
     
 }
 
-
-.image {
-    width: 250px;
-    height: 250px;
+.navbar {
+    height: 60px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    width: 100%;
+    color: #ffffff;
+    font-size: 15px;
+    margin: 10px;
+    list-style: none;
+    border-bottom: 3px solid #ffffff;
+ 
 }
+
+
+.navbar a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+    display: flex;
+    text-decoration: none;
+    justify-content: right;
+    width: 100%;
+}
+
+.navbar li:hover {
+    color: #f12361;
+    transition: 0.3s;
+}
+
+
 .container {
     width: 100%;
     height: 100%;
@@ -26,6 +54,92 @@ body {
     justify-content: space-around;
     align-content: center;
     gap: 2rem;
-   
+    list-style: none;
+    text-decoration: none;
     
+
+}
+
+
+.btn1{
+    grid-template-columns: 250px 250px;
+    background-image: url(assets/mulher.png);
+    background-position: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    font-family: judson;
+    color: #ffffff;
+    border-color: black;
+    border-radius: 15px;
+    background-color: #ff92adbb;
+    margin-top: 40px;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+.titulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+.btn2{
+    grid-template-columns: 250px 250px;
+    background-image: url(assets/ondulado\ \(3\).png);
+    background-position: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    font-family: judson;
+    color: #ffffff;
+    border-color: black;
+    border-radius: 15px;
+    background-color: #ff92adbb;
+    margin-top: 40px;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.btn3{
+    grid-template-columns: 250px 250px;
+    background-image: url(assets/afro.png);
+    background-position: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    font-family: judson;
+    color: #ffffff;
+    border-color: black;
+    border-radius: 15px;
+    background-color: #ff92adbb;
+    margin-top: 40px;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.btn4{
+    grid-template-columns: 250px 250px;
+    background-image: url(assets/cabelisoo.png);
+    background-position: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    font-family: judson;
+    color: #ffffff;
+    border-color: black;
+    border-radius: 15px;
+    background-color: #ff92adbb;
+    margin-top: 40px;
+    list-style: none;
+    text-decoration: none;
 }
