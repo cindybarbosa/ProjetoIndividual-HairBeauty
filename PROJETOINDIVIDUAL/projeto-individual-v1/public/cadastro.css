@@ -6,7 +6,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    color: rgb(8, 8, 8);
+    color: #080808;
     box-sizing: border-box;
     background-image: url(assets/kerastasesrosa.jpg);
     background-position: 100%;
@@ -43,11 +43,12 @@ a{
     text-align: center;
     justify-content: right;
     width: 50%;
-    color: white;
+    color: #ffffff;
     font-size: 25px;
     margin: 10px;
     list-style: none;
 }
+
 
 .header {
     border-bottom: 3px solid #ffffff;
@@ -89,7 +90,7 @@ a{
     align-items: center;
     border-radius: 5px;
     text-align: center;
-    border-color: rgba(178, 176, 245, 0.925);
+    border-color: #b2b0f5ec;
     background-color: white;
     border-radius: 5px;
     height: 30px;
@@ -108,11 +109,11 @@ a{
 
 .botao {
     border-radius: 5px;
-    background-color: rgba(238, 11, 106, 0.925);
+    background-color: #ee0b6aec;
     height: 30px;
     width: 110px;
-    color: white;
-    border-color: rgba(243, 46, 128, 0.925);
+    color: #ffffff;
+    border-color: #f32e80ec;
     justify-content: center;
     margin-left: 61px;
     gap: 10px;
