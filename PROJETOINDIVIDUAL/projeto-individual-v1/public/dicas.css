@@ -57,7 +57,6 @@ body {
     list-style: none;
     text-decoration: none;
     
-
 }
 
 
@@ -75,9 +74,28 @@ body {
     border-radius: 15px;
     background-color: #ff92adbb;
     margin-top: 40px;
+    
+    
+}
+.btn1 a{
     list-style: none;
     text-decoration: none;
-    
+    color: #ffffff;
+}
+.btn2 a{
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+.btn3 a{
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+.btn4 a{
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .titulo{
@@ -85,7 +103,10 @@ body {
     display: flex;
     justify-content: center;
     margin: 10px;
+    font-size: 50px;
 }
+
+
 
 
 .btn2{
