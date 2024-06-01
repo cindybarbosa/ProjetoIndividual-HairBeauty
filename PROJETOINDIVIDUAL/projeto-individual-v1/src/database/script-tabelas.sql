@@ -17,23 +17,36 @@ email varchar(60),
 senha varchar(100),
 confSenha varchar(100));
 
- 
-create table quiz (
-idQuiz int primary key,
-pontos int
+
+create table metricas(
+idMetricas int primary key auto_increment,
+qntdAcertos int,
+qntdErros int,
+fkUsuario int,
+constraint fkUsuarioMetricas foreign key (fkusuario)references usuario (idusuario)
 );
 
-create table cadastroQuiz (
+
+create table UsuarioMetricas(
 fkUsuario int,
-fkQuiz int,
+fkMetricas int,
 dtHora datetime,
 foreign key (fkUsuario)
 references usuario(idUsuario),
-foreign key (fkQuiz)
-references quiz(idQuiz),
-primary key (fkUsuario, fkQuiz, dtHora)
+foreign key (fkMetricas)
+references metricas(idMetricas),
+primary key (fkUsuario, fkMetricas, dtHora)
 );
 
+select * from usuario;
 
+select avg(qntdAcertos) from metricas;
 
+select sum(idUsuario) from usuario;
 
+select count(idUsuario) from usuario;
+
+SELECT COUNT(DISTINCT um.fkUsuario) AS qntdPessoasAcessaram FROM UsuarioMetricas um
+JOIN usuario u ON um.fkUsuario = u.idUsuario;
+
+select * from  UsuarioMetricas join usuario on idUsuario = fkUsuario;

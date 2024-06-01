@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: judson;
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    background-image: url(assets/produtos4.jpg);
+    background-position: 100%;
+    background-size: 100%;
+    gap: 1rem;
+    background-repeat: no-repeat;
+
+
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    border-bottom: 3px solid #ffffff;
+
+
+}
+
+.titulo {
+    color: white;
+    text-shadow: #f12361;
+    display: flex;
+    margin: auto;
+    justify-content: left;
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.navbar {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    text-align: end;
+    justify-content: right;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    margin: 20px;
+    list-style: none;
+    text-align: end;
+
+}
+
+
+.navbar a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+}
+
+.navbar li:hover {
+    color: #f12361;
+    transition: 0.3s;
+}
+
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.navbar .inicio p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+.inicio p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+.graficos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.graficos div {
+    margin-left: 20px;
+}
+
+.graficos canvas {
+    display: flex;
+    max-width: 560px;
+    max-height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+h1 {
+    display: flex;
+    color: antiquewhite;
+    font-size: xx-large;
+}
+
+h2 {
+    display: flex;
+    color: antiquewhite;
+    justify-content: space-evenly;
+}
+
+h3 {
+    display: flex;
+    font-family: judson;
+    color: #ffffff;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: row;
+    text-align: center;
+    margin-right: 250px;
+}
+
+.barras {
+    display: flex;
+    justify-content: center;
+    height: 340px;
+    width: 730px;
+}
+
+.kpi {
+    display: flex;
+    margin-top: 70px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #fd8d43;
+    height: 150px;
+    border-radius: 14px;
+    align-items: center;
+    width: 150vw;
+    border-radius: 30px;
+    padding: 13px;
+    text-align: center;
+}

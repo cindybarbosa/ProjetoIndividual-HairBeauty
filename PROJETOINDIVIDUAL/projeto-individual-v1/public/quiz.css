@@ -21,6 +21,7 @@ body {
     list-style: none;
     border-bottom: 3px solid #ffffff;
     justify-content: space-between;
+   
 
 }
 
@@ -49,6 +50,8 @@ a {
     margin: 20px;
     list-style: none;
     text-align: end;
+    flex-direction: row;
+
 }
 
 .navbar a {
@@ -96,7 +99,7 @@ h2 {
 
 p {
     color: #020202;
-    
+
 }
 
 button {
@@ -115,7 +118,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(253, 141, 67);
+    background-color: #fd8d43;
 }
 
 #result {
