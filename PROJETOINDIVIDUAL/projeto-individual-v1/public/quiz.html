@@ -57,6 +57,7 @@
         var acertos = 0;
         var erros = 0;
         var fkUsuarioVar = sessionStorage.ID_USUARIO;
+        var fkQuizVar = 1;
 
         function embaralharPerguntas() {
             perguntas_embaralhadas = perguntas.slice();
@@ -107,17 +108,24 @@
                     document.getElementById('voltar').style.display = "block"; // Mostra o botão "Voltar"
 
                     // fazer fetch no end point de inserção dos dados
-                    fetch("http://localhost:3333/banco/guardar", {
+                    fetch("/metricas/cadastrar", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
                         },
                         body: JSON.stringify({
                             fkUsuarioServer: fkUsuarioVar,
-                            qtdAcertosServer: acertos,
-                            qtdErrosServer: erros
+                            fkQuizServer: fkQuizVar,
+                            qntdAcertosServer: acertos,
+                            qntdErrosServer: erros
                         }),
-                    }).then((res) => console.log(res.json())).then((res) => {})
+                    }).then((res) => {
+                        if(res.ok){
+                            window.location = 'dashboard.html';
+                        }
+                    }).catch((error)=>{
+
+                    })
 
                     // Oculta os botões de opção
                     for (var index = 0; index < 3; index++) {

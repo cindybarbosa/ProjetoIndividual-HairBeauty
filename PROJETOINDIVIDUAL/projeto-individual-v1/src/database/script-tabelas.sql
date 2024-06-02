@@ -17,36 +17,41 @@ email varchar(60),
 senha varchar(100),
 confSenha varchar(100));
 
+create table quiz (
+idQuiz int primary key auto_increment,
+nome varchar(45),
+descricao varchar(45)
+);
 
-create table metricas(
-idMetricas int primary key auto_increment,
+
+create table metrica(
+idMetrica int auto_increment,
+fkUsuario int,
+fkQuiz int,
+dtHora datetime default current_timestamp,
 qntdAcertos int,
 qntdErros int,
-fkUsuario int,
-constraint fkUsuarioMetricas foreign key (fkusuario)references usuario (idusuario)
-);
-
-
-create table UsuarioMetricas(
-fkUsuario int,
-fkMetricas int,
-dtHora datetime,
 foreign key (fkUsuario)
 references usuario(idUsuario),
-foreign key (fkMetricas)
-references metricas(idMetricas),
-primary key (fkUsuario, fkMetricas, dtHora)
+foreign key (fkQuiz)
+references quiz(idQuiz),
+primary key (idMetrica, fkUsuario, fkQuiz)
 );
+
+select * from metrica;
+
+insert into quiz values
+(default, 'Cabelos', 'Conhecimentos gerais sobre cuidados capilares');
 
 select * from usuario;
 
-select avg(qntdAcertos) from metricas;
-
-select sum(idUsuario) from usuario;
+select avg(qntdAcertos) from metrica;
 
 select count(idUsuario) from usuario;
 
-SELECT COUNT(DISTINCT um.fkUsuario) AS qntdPessoasAcessaram FROM UsuarioMetricas um
+SELECT COUNT(DISTINCT um.fkUsuario) AS qntdPessoasResponderam FROM metrica um
 JOIN usuario u ON um.fkUsuario = u.idUsuario;
 
-select * from  UsuarioMetricas join usuario on idUsuario = fkUsuario;
+select * from  metrica join usuario on idUsuario = fkUsuario;
+
+select * from metrica where fkUsuario = 6 order by idMetrica desc limit 1;
