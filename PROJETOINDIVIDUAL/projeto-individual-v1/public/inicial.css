@@ -26,6 +26,7 @@ body {
     background-color: #ff92adbb;
     position: fixed;
     width: 100%;
+    flex-direction: row;
 
 }
 
@@ -35,7 +36,8 @@ body {
     display: flex;
     margin: auto;
     font-family: monospace;
-    text-shadow: 0.1em 0.1em 0.2em #ffffff
+    text-shadow: 0.1em 0.1em 0.2em #ffffff;
+    flex-direction: row;
 }
 
 
@@ -62,6 +64,13 @@ body {
 
 }
 
+.SM{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
 .navbar a:hover {
     color: #ffffff;
     transition: 0.3s;
@@ -75,22 +84,16 @@ ul {
     align-items: center;
     width: 84%;
     flex-wrap: nowrap;
+    flex-direction: row;
 }
 
-
-
-
-.prop {
-    width: 100px;
-    gap: 20px;
-
-}
 
 .S {
     display: flex;
-    width: 10%;
+    width: 100%;
     justify-content: right;
     gap: 5vh;
+    flex-direction: row;
 }
 
 .banner {
