@@ -9,22 +9,42 @@ email varchar(60),
 senha varchar(100),
 confSenha varchar(100));
 
- 
 create table quiz (
-idQuiz int primary key,
-pontos int
+idQuiz int primary key auto_increment,
+nome varchar(45),
+descricao varchar(45)
 );
 
-create table cadastroQuiz (
+
+create table metrica(
+idMetrica int auto_increment,
 fkUsuario int,
 fkQuiz int,
-dtHora datetime,
+dtHora datetime default current_timestamp,
+qntdAcertos int,
+qntdErros int,
 foreign key (fkUsuario)
 references usuario(idUsuario),
 foreign key (fkQuiz)
 references quiz(idQuiz),
-primary key (fkUsuario, fkQuiz, dtHora)
+primary key (idMetrica, fkUsuario, fkQuiz)
 );
 
+select * from metrica;
+
+insert into quiz values
+(default, 'Cabelos', 'Conhecimentos gerais sobre cuidados capilares');
+
+select * from usuario;
 
 
+select avg(qntdAcertos) from metrica;
+
+select count(idUsuario) from usuario;
+
+SELECT COUNT(DISTINCT um.fkUsuario) AS qntdPessoasResponderam FROM metrica um
+JOIN usuario u ON um.fkUsuario = u.idUsuario;
+
+select * from  metrica join usuario on idUsuario = fkUsuario;
+
+select * from metrica where fkUsuario = 6 order by idMetrica desc limit 1;
