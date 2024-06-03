@@ -79,21 +79,17 @@ body {
 ul {
     list-style: none;
     font-size: 25px;
-    gap: 29vh;
+    gap: 8px;
     display: flex;
     align-items: center;
-    width: 84%;
+    width: 100%;
+    height: 56px;
     flex-wrap: nowrap;
     flex-direction: row;
 }
 
-
-.S {
-    display: flex;
-    width: 100%;
-    justify-content: right;
-    gap: 5vh;
-    flex-direction: row;
+ul a {
+    width: 50%;
 }
 
 .banner {
@@ -160,8 +156,8 @@ ul {
     font-size: 20px;
     color: white;
     font-size: 25px;
-    margin: 30px;
-    gap: 23rem;
+    gap: 18rem;
+    margin-top: 30px;
     background-image: url(assets/abracoREM.png);
     background-position: center;
     background-repeat: no-repeat;
